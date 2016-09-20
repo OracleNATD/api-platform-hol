@@ -1,0 +1,52 @@
+FORMAT: 1A
+HOST: http://apics.oracle.com:8001/
+
+# Energy
+
+Gives a real time current month's usage of Gas and Electricity Services. Also gives an estimate of the next billing cycle's usage.
+
+
+
+## Usage [/usage/current/month/{accountNumber}]
+
+### Current Month [GET]
+Returns current month's usage information for the provided customer id.
+
++ Parameters
+    + accountNumber: 4859634 (number) - Customer's account number.
+
++ Response 200 (application/json)
+
+        
+        {
+            "account_number": "4859634",
+            "name": "Darko",
+            "gas_usage": "20,006 Btu",
+            "gas_cost": "¥ 46,896",
+            "electricity_usage": "3,430 kW",
+            "electricity_cost": "¥ 12,932",
+            "environment": "Japan 1",
+            "serviceID": "7777"
+        }
+
+## Estimate [/estimate/{accountNumber}]
+
+### Estimate [GET]
+Returns an estimate of next month's usage information for the provided customer account number.
+
++ Parameters
+    + accountNumber: 4859634 (number) - Customer's account number.
+
+
++ Response 200 (application/json)
+
+        {
+            "account_number": "4859634",
+            "name": "Darko",
+            "gas_estimate_usage": "32,000 Btu",
+            "gas_estimate_cost": "¥ 46,896",
+            "electricity_estimate_usage": "3,430 kW",
+            "electricity_estimate_cost": "¥ 12,932",
+            "environment": "Japan 1",
+            "serviceID": "7777"
+        }
