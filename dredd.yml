@@ -1,0 +1,36 @@
+reporter: apiary
+custom:
+  apiaryApiKey: 65d9a3c5dc34dc3b9bd2fcbd68a435ab
+  apiaryApiName: energy14
+dry-run: null
+hookfiles: null
+language: nodejs
+sandbox: false
+server: null
+server-wait: 3
+init: false
+names: false
+only: []
+output: []
+header: [api-key:f3ae03ca-0937-4510-be76-775d6ada45e2, tenant-id:1]
+sorted: false
+user: null
+inline-errors: false
+details: false
+method: []
+color: true
+level: info
+timestamp: false
+silent: false
+path: []
+hooks-worker-timeout: 5000
+hooks-worker-connect-timeout: 1500
+hooks-worker-connect-retry: 500
+hooks-worker-after-connect-wait: 100
+hooks-worker-term-timeout: 5000
+hooks-worker-term-retry: 500
+hooks-worker-handler-host: localhost
+hooks-worker-handler-port: 61321
+config: ./dredd.yml
+blueprint: apiary.apib
+endpoint: 'http://apics.oracle.com:8001/Energy/1/'
