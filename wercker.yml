@@ -8,14 +8,13 @@ build:
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
-        name: Validate node version and directory information
+        name: Install Dredd
         code: |
-          echo "node version $(node -v) running"
-          echo "npm version $(npm -v) running"
-          echo "pwd $(pwd)"
-          echo "ls -ltrah $(ls -ltrah)"
           npm install dredd
 
 dredd:
   steps:
-    - dredd
+    - script:
+        name: Run Dredd
+        code: |
+          dredd
