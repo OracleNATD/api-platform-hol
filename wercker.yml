@@ -3,8 +3,9 @@ box: node
 build:
   steps:
     - npm-install 
-  - script:
-    npm install dredd
+     # and the code value contains the command that get executed
+    - script:
+           npm install dredd
 
 dredd:
   steps:
