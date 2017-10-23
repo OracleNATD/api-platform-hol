@@ -10,11 +10,15 @@ build:
     - script:
         name: Install Dredd
         code: |
-          npm install dredd
+          echo "node version $(node -v) running"
+          echo "npm version $(npm -v) running"
+          echo "pwd $(pwd)"
+          echo "ls -ltrah $(ls -ltrah)"        
+          npm install dredd -g
 
 dredd:
   steps:
     - script:
         name: Run Dredd
         code: |
-          /pipeline/source/dredd
+          dredd
