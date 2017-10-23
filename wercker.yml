@@ -5,7 +5,7 @@ build:
     - npm-install 
      # and the code value contains the command that get executed
     - script:
-           npm install dredd
+        npm install dredd
 
 dredd:
   steps:
