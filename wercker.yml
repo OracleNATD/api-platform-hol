@@ -17,4 +17,4 @@ dredd:
     - script:
         name: Run Dredd
         code: |
-          dredd
+          /pipeline/source/dredd
