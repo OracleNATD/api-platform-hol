@@ -1,9 +1,10 @@
-box: node
+box: apiaryio/dredd
+#box: node
 
 build:
   steps:
     # A step that executes `npm install` command
-    - npm-install
+#    - npm-install
 
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
@@ -14,7 +15,7 @@ build:
           echo "npm version $(npm -v) running"
           echo "pwd $(pwd)"
           echo "ls -ltrah $(ls -ltrah)"        
-          npm install dredd -g
+#          npm install dredd -g
 
 dredd:
   steps:
