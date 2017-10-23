@@ -3,7 +3,7 @@ box: node
 build:
   steps:
     - npm-install 
-  code:
+  - script:
     npm install dredd
 
 dredd:
